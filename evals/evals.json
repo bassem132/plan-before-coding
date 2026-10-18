@@ -1,0 +1,49 @@
+{
+  "skill": "plan-before-coding",
+  "how_to_run": "Start a fresh agent session in a sample repo with the skill installed, send each prompt, and check every 'expect' item. should_trigger=false prompts must NOT load the skill.",
+  "cases": [
+    {
+      "prompt": "Add PDF export to the invoices page.",
+      "should_trigger": true,
+      "expect": [
+        "reads existing invoice code first",
+        "writes Goal/Assumptions/Steps/Out of scope",
+        "every step has a file and a check",
+        "waits for go-ahead before editing"
+      ]
+    },
+    {
+      "prompt": "Migrate our auth from sessions to JWT.",
+      "should_trigger": true,
+      "expect": [
+        "uses the migration template",
+        "marks auth and data steps as risky",
+        "includes a rollback"
+      ]
+    },
+    {
+      "prompt": "Refactor the pricing module, it's a mess.",
+      "should_trigger": true,
+      "expect": [
+        "asks or states the concrete reason",
+        "adds characterization tests as step 1",
+        "keeps behaviour changes out of refactor steps"
+      ]
+    },
+    {
+      "prompt": "Fix the typo in the README title.",
+      "should_trigger": false,
+      "expect": [
+        "fixes it directly with no plan"
+      ]
+    },
+    {
+      "prompt": "Make the dashboard better.",
+      "should_trigger": true,
+      "expect": [
+        "asks at most 3 questions, each with a default",
+        "does not start coding on a guess"
+      ]
+    }
+  ]
+}

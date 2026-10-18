@@ -1,7 +1,17 @@
 {
   "name": "plan-before-coding",
-  "owner": { "name": "Bassem Mo'men" },
+  "owner": {
+    "name": "Bassem Mo'men"
+  },
   "plugins": [
-    { "name": "plan-before-coding", "source": "./", "description": "Makes your AI agent write a short plan of small, verifiable steps before touching code, so it builds the right thing the first time." }
-  ]
+    {
+      "name": "plan-before-coding",
+      "source": "./",
+      "description": "Makes your AI agent write a short plan of small, verifiable steps before touching code, so it builds the right thing the first time."
+    }
+  ],
+  "metadata": {
+    "description": "Makes your AI agent write a short plan of small, verifiable steps before touching code, so it builds the right thing the first time.",
+    "version": "1.1.0"
+  }
 }
