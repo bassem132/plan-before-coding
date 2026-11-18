@@ -1,5 +1,5 @@
 ---
-description: Turn a request into a short written plan of small, checkable steps before writing code, and get a go-ahead first. Use when the user asks to build, add, implement, refactor, migrate or redesign something; when a change touches more than one file; when the request could mean more than one thing; or when you'd have to guess a library, data shape or UX detail. Skip it for typos, one-line fixes and tasks the user already spelled out step by step.
+description: Turn a request into a short written plan of small, checkable steps before writing code. Asks for a go-ahead only when the change is large or risky; otherwise states the plan and proceeds. Use when the user asks to build, add, implement, refactor, migrate or redesign something; when a change touches more than one file; when the request could mean more than one thing; or when you'd have to guess a library, data shape or UX detail. Skip it for typos, one-line fixes and tasks the user already spelled out step by step.
 alwaysApply: false
 ---
 
@@ -30,7 +30,7 @@ Skip it for typos, one-line fixes and tasks the user already wrote out step by s
    ```bash
    python3 .cursor/skills/plan-before-coding/scripts/check_plan.py plan.md     # or pipe it in: … check_plan.py -
    ```
-8. **Get a go-ahead**, then work through the steps in order. After each step, run its check before starting the next.
+8. **Get a go-ahead** (full plans only; for a lightweight plan, state it and proceed), then work through the steps in order. After each step, run its check before starting the next.
 9. **If reality doesn't match the plan**, stop, update the plan, and tell the user what changed and why. Don't drift silently.
 
 ## Plan format

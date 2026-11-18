@@ -1,7 +1,7 @@
 ---
 name: plan-before-coding
-description: Turn a request into a short written plan of small, checkable steps before writing code, and get a go-ahead first. Use when the user asks to build, add, implement, refactor, migrate or redesign something; when a change touches more than one file; when the request could mean more than one thing; or when you'd have to guess a library, data shape or UX detail. Skip it for typos, one-line fixes and tasks the user already spelled out step by step.
-author: Bassem Mo'men
+description: Turn a request into a short written plan of small, checkable steps (each with a file and a check) before writing code. Asks for a go-ahead only when the change is large or risky; otherwise states the plan and proceeds. Use when the user asks to build, add, implement, refactor, migrate or redesign something; when a change touches more than one file; when the request could mean more than one thing; or when you'd have to guess a library, data shape or UX detail. Skip it for typos, one-line fixes, tasks the user already spelled out step by step, and when another planning skill (such as writing-plans) is already active for this task.
+author: Bassem Moumen
 license: MIT
 ---
 
@@ -16,6 +16,13 @@ Most wasted agent work comes from building the wrong thing with confidence. A fe
 - You'd have to guess a library, data shape, API or UX detail.
 
 Skip it for typos, one-line fixes and tasks the user already wrote out step by step.
+
+## Pick a mode
+
+- **Full plan** (the Procedure below): the change touches 3+ files, has a ⚠️ risky step, or the request is ambiguous. Wait for a go-ahead.
+- **Lightweight plan**: the change touches 1–2 files, has no risky step, and the request is clear. Write 3–5 lines inline (goal, steps each with a `check:`, out of scope), skip the template and the linter, then **proceed without waiting**. This is also the default when the user is in auto/autonomous mode or says "just do it": state the plan, then go. Still stop and ask before any ⚠️ step.
+
+When unsure, start lightweight and upgrade to a full plan if you discover a risky step or more files than expected.
 
 ## Procedure
 

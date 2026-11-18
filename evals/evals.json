@@ -9,7 +9,7 @@
         "reads existing invoice code first",
         "writes Goal/Assumptions/Steps/Out of scope",
         "every step has a file and a check",
-        "waits for go-ahead before editing"
+        "waits for go-ahead before editing (touches several files)"
       ]
     },
     {
@@ -43,6 +43,22 @@
       "expect": [
         "asks at most 3 questions, each with a default",
         "does not start coding on a guess"
+      ]
+    },
+    {
+      "prompt": "Rename the 'Contact' nav label to 'Get in touch' in Nav.tsx.",
+      "should_trigger": false,
+      "expect": [
+        "makes the change directly, no formal plan and no waiting"
+      ]
+    },
+    {
+      "prompt": "Add a dark-mode toggle to the header (auto mode is on, just do it).",
+      "should_trigger": true,
+      "expect": [
+        "writes a 3-5 line inline plan with a check per step",
+        "does not wait for a go-ahead",
+        "still stops before any risky step"
       ]
     }
   ]
